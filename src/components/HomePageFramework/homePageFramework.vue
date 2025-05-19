@@ -1,73 +1,78 @@
 <template>
   <div class="home-page-framework">
-    <!-- 头部 -->
-    <div class="home-page-header">
-      <div class="home-page-header-title-image">
-        <img src="@/assets/zhnawei.png" alt="" />
-      </div>
-
-      <div class="home-page-header-title">
-        <el-dropdown>
-          <span class="el-dropdown-link"> HOME PAGES </span>
-          <template #dropdown>
-            <el-dropdown-menu>
-              <el-dropdown-item class="el-dropdown-item-box">首页1</el-dropdown-item>
-              <el-dropdown-item>首页2</el-dropdown-item>
-            </el-dropdown-menu>
-          </template>
-        </el-dropdown>
-
-        <el-dropdown>
-          <span class="el-dropdown-link"> PAGES </span>
-          <template #dropdown>
-            <el-dropdown-menu>
-              <el-dropdown-item>Action 1</el-dropdown-item>
-              <el-dropdown-item>Action 2</el-dropdown-item>
-              <el-dropdown-item>Action 3</el-dropdown-item>
-            </el-dropdown-menu>
-          </template>
-        </el-dropdown>
-
-        <el-dropdown>
-          <span class="el-dropdown-link"> SHOP </span>
-          <template #dropdown>
-            <el-dropdown-menu>
-              <el-dropdown-item>Action 1</el-dropdown-item>
-              <el-dropdown-item>Action 2</el-dropdown-item>
-              <el-dropdown-item>Action 3</el-dropdown-item>
-            </el-dropdown-menu>
-          </template>
-        </el-dropdown>
-
-        <el-dropdown>
-          <span class="el-dropdown-link"> BLOG </span>
-          <template #dropdown>
-            <el-dropdown-menu>
-              <el-dropdown-item>Action 1</el-dropdown-item>
-              <el-dropdown-item>Action 2</el-dropdown-item>
-              <el-dropdown-item>Action 3</el-dropdown-item>
-            </el-dropdown-menu>
-          </template>
-        </el-dropdown>
-
-        <el-dropdown>
-          <span class="el-dropdown-link"> CONTACT US </span>
-          <template #dropdown>
-            <el-dropdown-menu>
-              <el-dropdown-item>Action 1</el-dropdown-item>
-              <el-dropdown-item>Action 2</el-dropdown-item>
-              <el-dropdown-item>Action 3</el-dropdown-item>
-            </el-dropdown-menu>
-          </template>
-        </el-dropdown>
-      </div>
-
-      <div class="home-page-header-title-Search">
-        <div class="Search-image">
-          <img src="@/assets/Search.png" alt="" />
+    <div class="TopBox">
+      <!-- 头部 -->
+      <div class="home-page-header">
+        <div class="home-page-header-title-image">
+          <img src="@/assets/zhnawei.png" alt="" />
         </div>
 
-        <div class="UserInfo">登录</div>
+        <div class="home-page-header-title-box">
+          <div class="home-page-header-title">
+
+            <el-dropdown>
+              <span class="el-dropdown-link"> HOME PAGES </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item>首页1</el-dropdown-item>
+                  <el-dropdown-item>首页2</el-dropdown-item>
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+
+            <el-dropdown>
+              <span class="el-dropdown-link"> PAGES </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item>Action 1</el-dropdown-item>
+                  <el-dropdown-item>Action 2</el-dropdown-item>
+                  <el-dropdown-item>Action 3</el-dropdown-item>
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+
+            <el-dropdown>
+              <span class="el-dropdown-link"> SHOP </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item>Action 1</el-dropdown-item>
+                  <el-dropdown-item>Action 2</el-dropdown-item>
+                  <el-dropdown-item>Action 3</el-dropdown-item>
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+
+            <el-dropdown>
+              <span class="el-dropdown-link"> BLOG </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item>Action 1</el-dropdown-item>
+                  <el-dropdown-item>Action 2</el-dropdown-item>
+                  <el-dropdown-item>Action 3</el-dropdown-item>
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+
+            <el-dropdown>
+              <span class="el-dropdown-link"> CONTACT US </span>
+              <template #dropdown>
+                <el-dropdown-menu>
+                  <el-dropdown-item>Action 1</el-dropdown-item>
+                  <el-dropdown-item>Action 2</el-dropdown-item>
+                  <el-dropdown-item>Action 3</el-dropdown-item>
+                </el-dropdown-menu>
+              </template>
+            </el-dropdown>
+          </div>
+        </div>
+
+        <div class="home-page-header-title-Search">
+          <div class="Search-image">
+            <img src="@/assets/Search.png" alt="" />
+          </div>
+
+          <div class="UserInfo">登录</div>
+        </div>
       </div>
     </div>
 
@@ -93,6 +98,12 @@
   flex-direction: column;
 }
 
+.TopBox {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+
 .home-page-header {
   width: 100%;
   height: 86px;
@@ -111,12 +122,18 @@
     }
   }
 
+  .home-page-header-title-box {
+    width: 50%;
+    height: 100%;
+  }
+
   .home-page-header-title {
-    width: 55%;
+    width: 70%;
     height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
 
     .el-dropdown {
       width: 20%;
@@ -126,11 +143,6 @@
       align-items: center;
     }
 
-    .el-dropdown-item-box {
-      width: 150px;
-      border: aqua 1px solid;
-    }
-
     .el-dropdown-link {
       width: 100%;
       height: 100%;
@@ -138,30 +150,26 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 14px;
       font-weight: bold;
-
-      &:hover {
-        border: none !important;
-        color: rgba(249, 126, 15, 1);
-      }
     }
   }
 
   .home-page-header-title-Search {
-    width: 20%;
+    width: auto;
     height: 100%;
     display: flex;
+    justify-content: flex-start;
 
     .Search-image {
-      width: 15%;
-      height: 70%;
+      width: 65px;
+      height: 60px;
       display: flex;
       justify-content: center;
       align-items: center;
       border: #ecf0f1 1px solid;
       border-radius: 8px;
-      margin: auto;
+      margin: auto 0;
 
       img {
         width: 35%;
@@ -169,14 +177,14 @@
     }
 
     .UserInfo {
-      width: 20%;
+      width: 120px;
       height: 70%;
       display: flex;
       justify-content: center;
       align-items: center;
       border: #ecf0f1 1px solid;
       border-radius: 8px;
-      margin: auto 10px;
+      margin: auto 20px;
     }
   }
 }
@@ -185,7 +193,6 @@
   width: 100%;
   flex: 1; // 让内容区域占据剩余空间
   overflow-y: auto; // 确保内容区域可以滚动
-
 }
 
 .home-page-bottom {

@@ -24,9 +24,18 @@
 
             <!--    多图片    -->
             <div class="LeftImageListBox">
-              <div class="LeftImageList" v-for="item in 4" :key="item">
+              <div class="LeftImageList">
                 <img src="@/assets/Apple.jpg" alt="" />
               </div>
+
+              <div class="LeftImageList">
+                <img src="@/assets/Apple2.png" alt="" />
+              </div>
+
+              <div class="LeftImageList">
+                <img src="@/assets/Apple3.png" alt="" />
+              </div>
+
             </div>
           </div>
 
@@ -37,7 +46,7 @@
             </div>
 
             <div class="PDRAmount">
-              <span> 250 ￥ </span>
+              <span> 1.5￥ / 1000g </span>
             </div>
 
             <div class="Score">
@@ -46,15 +55,13 @@
                 disabled
                 show-score
                 text-color="#ff9900"
-                score-template="{value} points"
+                score-template="{value}"
               />
             </div>
 
             <div class="ProductIntroduction">
               <span>
-                Donec sollicitudin molestie malesuada. Nulla porttitor accumsan tincidunt.
-                Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
-                Curae; Donec velit neque,
+                亲爱的朋友们，今天给大家推荐一款超赞的苹果！每一颗都是精心挑选的，个头超大，拿在手里沉甸甸的，咬一口，脆甜多汁，满口都是浓郁的果香。这苹果生长在阳光充足、土壤肥沃的地方，全程绿色种植，无农药残留，品质绝对杠杠的。无论是自己吃，还是送亲朋好友，都是超棒的选择。快来尝尝这大自然的馈赠吧，让你的味蕾享受一场甜蜜盛宴！
               </span>
 
               <div class="PID">
@@ -75,23 +82,25 @@
                 <span style="font-size: 17px; font-weight: bold; letter-spacing: 1px">
                   地址：
                 </span>
-                <span> 广西壮族自治区南宁市青秀区 </span>
+                <span> 山东省烟台市福山区果园路123号 </span>
               </div>
 
               <div class="PID">
                 <span style="font-size: 17px; font-weight: bold; letter-spacing: 1px">
                   溯源编号：
                 </span>
-                <span> </span>
+                <span>SN2025X9Y7Z4A8B6C3 </span>
               </div>
 
               <div class="PID">
                 <span style="font-size: 17px; font-weight: bold; letter-spacing: 1px">
                   标签：
                 </span>
-                <span>
-                  <el-tag type="success">苹果</el-tag>
-                </span>
+                <div class="spanTag">
+                  <el-tag type="success">大果脆甜</el-tag>
+                  <el-tag type="success">绿色种植</el-tag>
+                  <el-tag type="success">无农药残留</el-tag>
+                </div>
               </div>
             </div>
 
@@ -234,6 +243,9 @@ const tableData = [
     Values: '吃掉',
   },
 ]
+
+
+
 
 // 方法区域
 function TableContentsClick(index) {
